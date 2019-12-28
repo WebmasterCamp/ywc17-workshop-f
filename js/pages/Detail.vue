@@ -24,17 +24,19 @@
 
       story-section
 
+      review-section
 </template>
 
 <script>
 import NavBar from '../components/NavBar'
 import TagsList from '../components/TagsList'
 import StorySection from '../components/StorySection'
+import ReviewSection from '../components/ReviewSection'
 
 import {results} from '../result'
 
 export default {
-  components: {NavBar, TagsList, StorySection},
+  components: {NavBar, TagsList, StorySection, 'review-section': ReviewSection},
 
   computed: {
     data() {
@@ -57,7 +59,7 @@ export default {
   @use '../../styles/variables' as *
 
   .container
-    margin: 80px 50px
+    margin-top: 120px
 
   .cover-section
     position: relative
@@ -120,4 +122,3 @@ export default {
   hr
     margin: 2em
 </style>
-
