@@ -23,15 +23,17 @@
 
       .action-panel
         b-button.payment-button(to='/') ชำระเงิน
+    footer-section
 </template>
 
 <script>
 import NavBar from '../components/NavBar'
 import CourseCard from '../components/CourseCard'
 import SlotCard from '../components/SlotCard'
+import FooterSection from '../components/FooterSection'
 
 export default {
-  components: {NavBar, CourseCard, SlotCard},
+  components: {NavBar, CourseCard, SlotCard, FooterSection},
   methods: {
     setSlot(event, day) {
       console.log(day)
