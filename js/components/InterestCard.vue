@@ -1,5 +1,5 @@
 <template lang="pug">
-  .box(@click="toggle", :class="classes") {{title}} {{selected ? 'T' : 'F'}}
+  .box(@click="toggle", :class="classes") {{title}}
 </template>
 
 <script>
@@ -30,5 +30,6 @@
     min-height: 200px
 
   .selected
+    color: white
     background: $secondary
 </style>
