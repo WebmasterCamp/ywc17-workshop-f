@@ -3,7 +3,7 @@ import 'whatwg-fetch'
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
-import Landing from './components/Landing.vue'
+import Landing from './pages/Landing.vue'
 
 Vue.use(VueRouter)
 
@@ -18,3 +18,4 @@ const router = new VueRouter({
 })
 
 const app = new Vue({router}).$mount('#app')
+window.app = app

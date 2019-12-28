@@ -1,7 +1,5 @@
-<template>
-  <div>
-		Hello, World!
-  </div>
+<template lang="pug">
+  h1 Hello, World!
 </template>
 
 <script>
@@ -13,3 +11,8 @@
     components: {}
   }
 </script>
+
+<style lang="sass" scoped>
+  h1
+    color: teal
+</style>
