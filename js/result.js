@@ -8,6 +8,7 @@ export const results = [
     email: 'fmrth3@ksc.th.com',
     phone: '0-2589-5762',
     image: 'https://picsum.photos/500',
+    coverImage: 'https://picsum.photos/1920/500'
   },
   {
     title: 'นายเชาวลิต สาดสมัย',
@@ -17,6 +18,7 @@ export const results = [
     category: 'teacher',
     phone: '081-239-0813',
     image: 'https://picsum.photos/500',
+    coverImage: 'https://picsum.photos/1920/500',
     hasStory: true
   },
   {
@@ -28,6 +30,7 @@ export const results = [
     website: 'https://www.tp-school.ac.th',
     phone: '0-2243-8565',
     image: 'https://picsum.photos/500',
+    coverImage: 'https://picsum.photos/1920/500',
   },
   {
     title: 'โรงเรียนประถมนนทรี',
@@ -38,5 +41,6 @@ export const results = [
     website: 'https://www.tp-school.ac.th',
     phone: '0-2243-8565',
     image: 'https://picsum.photos/500',
+    coverImage: 'https://picsum.photos/1920/500',
   },
 ].map((x, i) => ({ ...x, id: i + 1 }))
