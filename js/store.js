@@ -1,4 +1,3 @@
-  
 import Vue from "vue"
 import Vuex from "vuex"
 
@@ -10,14 +9,11 @@ const initialState = () => ({
 
 const store = new Vuex.Store({
   state: initialState,
-  getters: {
-    player: state => state.room.players.find(p => p.name === state.playerName),
-    role: (state, {player}) => (player ? player.role : "villager")
-  },
   mutations: {
-    
+    toggleInterest(state, key) {
+      state.interests = {...state.interests, [key]: !state.interests[key]}
+    }
   },
 })
-
 
 export default store

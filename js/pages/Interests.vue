@@ -10,16 +10,19 @@
 </template>
 
 <script>
+  import {mapState} from 'vuex'
+
   import InterestCard from '../components/InterestCard.vue'
 
   export default {
-    computed: {
-      interests() {
-        return [{title: 'A'}, {title: 'B'}, {title: 'C'}, {title: 'D'}]
-      }
-    },
+    components: {InterestCard},
 
-    components: {InterestCard}
+    computed: mapState({
+      interests(state, props) {
+        const interests = [{title: 'A', name: 'A'}, {title: 'B', name: 'B'}, {title: 'C', name: 'C'}, {title: 'D', name: 'D'}]
+        return interests.map(d => ({...d, selected: state.interests[d.name]}))
+      }
+    }),
   }
 </script>
 
