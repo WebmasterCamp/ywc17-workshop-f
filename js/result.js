@@ -7,7 +7,7 @@ export const results = [
     category: 'school',
     email: 'fmrth3@ksc.th.com',
     phone: '0-2589-5762',
-    image: 'https://picsum.photos/500',
+    image: '/schools/school-01.png',
     coverImage: 'https://picsum.photos/1920/500'
   },
   {
@@ -17,7 +17,7 @@ export const results = [
     rating: 4.8,
     category: 'teacher',
     phone: '081-239-0813',
-    image: 'https://picsum.photos/500',
+    image: '/schools/school-02.jpg',
     coverImage: 'https://picsum.photos/1920/500',
     hasStory: true
   },
@@ -29,7 +29,7 @@ export const results = [
     category: 'teacher',
     website: 'https://www.tp-school.ac.th',
     phone: '0-2243-8565',
-    image: 'https://picsum.photos/500',
+    image: '/schools/school-03.jpg',
     coverImage: 'https://picsum.photos/1920/500',
   },
   {
@@ -40,7 +40,18 @@ export const results = [
     category: 'teacher',
     website: 'https://www.tp-school.ac.th',
     phone: '0-2243-8565',
-    image: 'https://picsum.photos/500',
+    image: '/schools/school-04.jpg',
+    coverImage: 'https://picsum.photos/1920/500',
+  },
+  {
+    title: 'โรงเรียนอนุบาลกรแก้ว',
+    tags: ['ชีวิต', 'จิตใจ'],
+    location: 'เขตดุสิต กรุงเทพฯ',
+    rating: 4.4,
+    category: 'teacher',
+    website: 'www.kornkaew.ac.th',
+    phone: '02-243-5563',
+    image: '/schools/school-05.jpg',
     coverImage: 'https://picsum.photos/1920/500',
   },
 ].map((x, i) => ({ ...x, id: i + 1 }))
