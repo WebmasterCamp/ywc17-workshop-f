@@ -3,6 +3,7 @@
     b-navbar-brand
       img(src="../../img/logo.svg")
     b-navbar-toggle(target='nav-collapse')
+      i.far.fa-bars.nav-icon
     b-collapse#nav-collapse(is-nav='')
       b-navbar-nav
       b-navbar-nav.ml-auto
@@ -28,7 +29,7 @@
     color: $grey
     font-family: $heading-font
     font-size: 18px
-    padding-right: 25px
+    padding-right: 30px
 
     &:hover
       color: #2d2d30
@@ -38,7 +39,26 @@
 
   .search-btn
     min-width: 100px
+    margin-left: 10px
+
+    @media screen and (max-width: $md)
+      margin-top: 15px
 
   .navbar-dark .navbar-toggler
     color: $secondary !important
+
+  .navbar-light.navbar-light.navbar-light
+    .navbar-toggler
+      border-color: transparent
+
+    &.navbar-expand-lg
+      padding: 0.6em 2.5em
+
+    .navbar-collapse
+      @media screen and (max-width: $md)
+        padding: 1.3em 0
+
+  .nav-icon
+    font-size: 29px
+    color: $secondary
 </style>
