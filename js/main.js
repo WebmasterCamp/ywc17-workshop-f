@@ -2,6 +2,7 @@ import 'whatwg-fetch'
 
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+import BootstrapVue from 'bootstrap-vue'
 
 import store from './store'
 
@@ -9,6 +10,7 @@ import Landing from './pages/Landing.vue'
 import Interests from './pages/Interests.vue'
 
 Vue.use(VueRouter)
+Vue.use(BootstrapVue)
 
 const router = new VueRouter({
 	routes: [
