@@ -34,6 +34,7 @@ export default {
     position: relative
     max-width: 300px
     margin: 0 auto
+    cursor: pointer
 
     .interest-text
       font-size: 20px
