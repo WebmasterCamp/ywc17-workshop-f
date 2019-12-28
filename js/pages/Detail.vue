@@ -100,6 +100,9 @@ export default {
     @media screen and (max-width: $md)
       left: 150px
 
+    @media screen and (max-width: 400px)
+      left: 10px
+
   .profile-photo
     width: 100px
     height: 100px
@@ -109,6 +112,9 @@ export default {
     border-radius: 10px
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2)
     background-color: white
+
+    @media screen and (max-width: 400px)
+      display: none
 
   .name
     display: flex
