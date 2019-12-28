@@ -6,18 +6,18 @@
       //-   router-link(to="/google" tag="div")
       //-     .link อ่านทั้งหมด
     .story-container.d-flex
-      router-link(to='/article/1')
-        .story-item
+      .story-item
+        router-link(to='/article/1')
           img(src="../../img/story-01.jpg", alt="alt")
           .story-overlay
           .story-content-title {{ article[0].title }}
-      router-link(to='/article/2')
-        .story-item
+      .story-item
+        router-link(to='/article/2')
           img(src="../../img/story-02.jpg", alt="alt")
           .story-overlay
           .story-content-title {{ article[1].title }}
-      router-link(to='/article/3')
-        .story-item
+      .story-item
+        router-link(to='/article/3')
           img(src="../../img/story-03.jpg", alt="alt").d-flex
           .story-overlay
           .story-content-title {{ article[2].title }}
@@ -66,13 +66,18 @@ export default {
     margin: 0 5%
   .story-container
     justify-content: center
-    padding: 0 28px
+    padding: 0 60px
+
+    @media screen and (max-width: $md)
+      padding: 0 30px
+
   .story-item
     margin: 15px
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15)
     border-radius: 1rem
     text-align: center
     position: relative
+    max-width: 500px
   .story-item img
     width: 100%
     border-radius: 0.8rem
@@ -108,4 +113,8 @@ export default {
       bottom: 3vw
       right: 3vw
       padding-left: 3vw
+
+    img
+      height: 100%
+      object-fit: cover
 </style>
