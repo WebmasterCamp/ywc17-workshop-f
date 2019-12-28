@@ -71,11 +71,11 @@ export default {
       padding: 3vw 20vw 0 20vw
     .action-button
       margin-top: 5%
-      padding: 1vw 2em
+      padding: 3.4vw 2em
       background-color: #11B3AC
-      width:18vw
-      font-size: 2vw
+      width: 40vw
+      font-size: 4.1vw
       position: absolute
-      bottom: 0
-      left: 0
+      bottom: 8vw
+      left: 27.5vw
 </style>

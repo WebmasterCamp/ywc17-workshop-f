@@ -6,10 +6,11 @@
       //-   router-link(to="/google" tag="div")
       //-     .link อ่านทั้งหมด
     .story-container.d-flex
-      .story-item
-        img(src="../../img/story-01.jpg", alt="alt")
-        .story-overlay
-        .story-content-title {{ article[0].title }}
+      b-button(v-b-modal.modal-tall='')
+        .story-item
+          img(src="../../img/story-01.jpg", alt="alt")
+          .story-overlay
+          .story-content-title {{ article[0].title }}
       .story-item
         img(src="../../img/story-02.jpg", alt="alt")
         .story-overlay
@@ -18,6 +19,15 @@
         img(src="../../img/story-03.jpg", alt="alt").d-flex
         .story-overlay
         .story-content-title {{ article[2].title }}
+
+
+
+
+    b-modal#modal-tall(title='Overflowing Content')
+      p.my-4(v-for='i in 20' :key='i')
+        | Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis
+        | in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+
     //-   router-link(to="/google" tag="div")
     //-     .link อ่านทั้งหมด
 </template>
