@@ -25,6 +25,10 @@
       story-section
 
       review-section
+
+      .action-panel
+        b-button.contact-btn(href="https://th-th.facebook.com/M.C.H.Moochopo" target="_blank") ติดต่อสอบถาม
+        b-button.payment-btn(to='/payment') สมัครเรียน
 </template>
 
 <script>
@@ -121,4 +125,14 @@ export default {
 
   hr
     margin: 2em
+
+  .action-panel
+    display: flex
+    align-items: center
+    justify-content: center
+    margin-bottom: 50px
+
+  .payment-btn
+    background: $accent
+    margin-left: 40px
 </style>
