@@ -12,6 +12,8 @@ import Result from './pages/Result.vue'
 import Detail from './pages/Detail.vue'
 import Payment from './pages/Payment.vue'
 import FirstStory from './pages/FirstStory.vue'
+import SecondStory from './pages/SecondStory.vue'
+import ThirdStory from './pages/ThirdStory.vue'
 
 Vue.use(VueRouter)
 Vue.use(BootstrapVue)
@@ -24,8 +26,8 @@ const router = new VueRouter({
     { path: '/detail/:id', component: Detail },
     { path: '/payment', component: Payment },
     { path: '/article/1', component: FirstStory },
-    { path: '/article/2', component: FirstStory },
-    { path: '/article/3', component: FirstStory },
+    { path: '/article/2', component: SecondStory },
+    { path: '/article/3', component: ThirdStory },
   ]
 })
 
