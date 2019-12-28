@@ -1,5 +1,8 @@
 <template lang="pug">
-  h1 Hello, World!
+  section.landing
+    .navbar-layout.bg-secondary.text-center(style="height: 50px") navbar
+    .hero.bg-light.text-center(style="height: 500px") hero
+    .article.bg-secondary.text-center(style="height: 400px") article
 </template>
 
 <script>
@@ -13,6 +16,5 @@
 </script>
 
 <style lang="sass" scoped>
-  h1
-    color: teal
+
 </style>
