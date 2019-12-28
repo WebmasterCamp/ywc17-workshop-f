@@ -7,15 +7,15 @@
       //-     .link อ่านทั้งหมด
     .story-container.d-flex
       .story-item
-        img(src="../../img/article-01.jpg", alt="alt")
+        img(src="../../img/story-01.jpg", alt="alt")
         .story-overlay
         .story-content-title {{ article[0].title }}
       .story-item
-        img(src="../../img/article-02.jpg", alt="alt")
+        img(src="../../img/story-02.jpg", alt="alt")
         .story-overlay
         .story-content-title {{ article[1].title }}
       .story-item
-        img(src="../../img/article-03.jpg", alt="alt").d-flex
+        img(src="../../img/story-03.jpg", alt="alt").d-flex
         .story-overlay
         .story-content-title {{ article[2].title }}
     //-   router-link(to="/google" tag="div")
@@ -41,6 +41,8 @@
 
 <style lang="sass" scoped>
   @use "../../styles/variables" as *
+  section 
+    padding-top: 50px
   .top
     text-align: left
     padding: 0 5%
@@ -78,11 +80,12 @@
   .story-content-title 
     position: absolute
     bottom: 1vw
-    font-size: 2vw
+    font-size: 25px
     right: 1vw
     text-align: right
     color: white
     width: 100%
+    padding-left: 2vw
   .story-overlay
     width: 100%
     height: 100%
@@ -100,5 +103,9 @@
     .story-item
       margin: 0 auto
       width: 85%
-      margin-top: 20%
+      margin-top: 10%
+    .story-content-title 
+      bottom: 3vw
+      right: 3vw
+      padding-left: 3vw
 </style>

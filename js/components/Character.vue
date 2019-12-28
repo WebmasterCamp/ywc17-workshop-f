@@ -31,6 +31,8 @@ export default {
 
 <style lang="sass" scoped>
   @use "../../styles/variables" as *
+  section 
+    padding: 50px 0
   .character-title
     font-size: 32px
     margin: 0 5%
