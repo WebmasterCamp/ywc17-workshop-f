@@ -1,5 +1,5 @@
 <template lang="pug">
-  router-link.result-card-container(to='/detail')
+  router-link.result-card-container(:to='"/detail/" + id')
     .result-card-header
       .left
         img.image(:src="image")
@@ -22,7 +22,7 @@
 
 <script>
 export default {
-  props: ['image', 'title', 'tags', 'location', 'rating'],
+  props: ['id', 'image', 'title', 'tags', 'location', 'rating'],
   computed: {},
   components: {},
 }

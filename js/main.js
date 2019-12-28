@@ -9,6 +9,7 @@ import store from './store'
 import Landing from './pages/Landing.vue'
 import Interests from './pages/Interests.vue'
 import Result from './pages/Result.vue'
+import Detail from './pages/Detail.vue'
 
 Vue.use(VueRouter)
 Vue.use(BootstrapVue)
@@ -18,6 +19,7 @@ const router = new VueRouter({
     { path: '/', component: Landing },
     { path: '/interests', component: Interests },
     { path: '/list', component: Result },
+    { path: '/detail/:id', component: Detail },
   ]
 })
 
