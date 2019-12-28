@@ -1,26 +1,25 @@
 <template lang="pug">
   section 
-    .top.d-flex.justify-content-between
-      .title บทความล่าสุด
-      .link-container-top.text-center
-        router-link(to="/google" tag="div")
-          .link อ่านทั้งหมด
-    .article-row.p-4.d-flex.justify-content-center.flex-wrap
-      .article-el
+    .story-top
+      .story-title บทความล่าสุด
+            //- .link-container-top.text-center
+      //-   router-link(to="/google" tag="div")
+      //-     .link อ่านทั้งหมด
+    .story-container.d-flex
+      .story-item
         img(src="../../img/article-01.jpg", alt="alt")
-        .article-overlay
-        .article-title {{ article[0].title }}
-      .article-el
+        .story-overlay
+        .story-content-title {{ article[0].title }}
+      .story-item
         img(src="../../img/article-02.jpg", alt="alt")
-        .article-overlay
-        .article-title {{ article[1].title }}
-      .article-el
-        img(src="../../img/article-03.jpg", alt="alt")
-        .article-overlay
-        .article-title {{ article[2].title }}
-    .link-container-bottom.text-center
-      router-link(to="/google" tag="div")
-        .link อ่านทั้งหมด
+        .story-overlay
+        .story-content-title {{ article[1].title }}
+      .story-item
+        img(src="../../img/article-03.jpg", alt="alt").d-flex
+        .story-overlay
+        .story-content-title {{ article[2].title }}
+    //-   router-link(to="/google" tag="div")
+    //-     .link อ่านทั้งหมด
 </template>
 
 <script>
@@ -42,7 +41,6 @@
 
 <style lang="sass" scoped>
   @use "../../styles/variables" as *
-
   .top
     text-align: left
     padding: 0 5%
@@ -61,15 +59,23 @@
     display: block
   .link-container-bottom
     display: none
-  .article-el
+
+  .story-title
+    font-size: 32px
+    margin: 0 5%
+  .story-container
+    justify-content: center
+  .story-item
     width: 28%
-    margin: 0.8rem
+    margin: 15px
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15)
+    border-radius: 1rem
+    text-align: center
     position: relative
-  .article-el img 
+  .story-item img 
     width: 100%
-    height: 100%
     border-radius: 0.8rem
-  .article-title 
+  .story-content-title 
     position: absolute
     bottom: 1vw
     font-size: 2vw
@@ -77,25 +83,22 @@
     text-align: right
     color: white
     width: 100%
-  .article-overlay
+  .story-overlay
     width: 100%
     height: 100%
     background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%)
     position: absolute
     top: 0
+    border-radius: 1rem
 
-  @media only screen and (max-width: 576px)
-    .title
+  @media only screen and (max-width: 768px)
+    .story-title
       text-align: center
-      padding-left: 0
-    .article-el
-      width: 80%
-    .article-title 
-      bottom: 8%
-      font-size: 20px
-      right: 8%
-    .link-container-top
-      display: none
-    .link-container-bottom
-      display: block
+    .story-container
+      flex-direction: column
+      padding-top: 0
+    .story-item
+      margin: 0 auto
+      width: 85%
+      margin-top: 20%
 </style>
