@@ -45,7 +45,8 @@ export default {
   computed: {
     data() {
       const id = this.$route.params.id
-      const data = results.find(x => x.id === id)
+      const data = results.find(x => x.id == id)
+
       if (!data) return results[0]
 
       return data
@@ -103,6 +104,7 @@ export default {
     top: -30%
     border-radius: 10px
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2)
+    background-color: white
 
   .name
     display: flex
