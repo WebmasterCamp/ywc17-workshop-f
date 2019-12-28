@@ -2,6 +2,7 @@
   .hero
     img.hero-bg(src="../../img/hero-bg.svg", alt="alt")
     img.hero-bg-mb(src="../../img/hero-bg-mb.svg", alt="alt")
+
     .hero-content
       .hero-head กิจกรรมสุดพิเศษ สำหรับลูกคนพิเศษ
       .hero-detail พื้นที่ที่จะเชื่อมโยงคุณและลูกคนพิเศษของคุณเข้ากับสถาบันต่าง ๆ
@@ -26,16 +27,18 @@ export default {
 
   .hero-bg
     width: 100%
+    min-height: 400px
   .hero-bg-mb
     width: 100%
     display: none
+    min-height: 400px
   .hero-content
     position: absolute
     width: 100%
     height: 100%
     top: 0
     left: 0
-    padding: 10% 5% 
+    padding: 10% 5%
 
   .hero-head
     font-size: 3.8vw

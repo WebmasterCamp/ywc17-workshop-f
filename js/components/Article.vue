@@ -1,57 +1,46 @@
 <template lang="pug">
-  section 
+  section
     .story-top
       .story-title บทความล่าสุด
             //- .link-container-top.text-center
       //-   router-link(to="/google" tag="div")
       //-     .link อ่านทั้งหมด
     .story-container.d-flex
-      b-button(v-b-modal.modal-tall='')
+      router-link(to='/article/1')
         .story-item
           img(src="../../img/story-01.jpg", alt="alt")
           .story-overlay
           .story-content-title {{ article[0].title }}
-      .story-item
-        img(src="../../img/story-02.jpg", alt="alt")
-        .story-overlay
-        .story-content-title {{ article[1].title }}
-      .story-item
-        img(src="../../img/story-03.jpg", alt="alt").d-flex
-        .story-overlay
-        .story-content-title {{ article[2].title }}
-
-
-
-
-    b-modal#modal-tall(title='Overflowing Content')
-      p.my-4(v-for='i in 20' :key='i')
-        | Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis
-        | in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-
-    //-   router-link(to="/google" tag="div")
-    //-     .link อ่านทั้งหมด
+      router-link(to='/article/2')
+        .story-item
+          img(src="../../img/story-02.jpg", alt="alt")
+          .story-overlay
+          .story-content-title {{ article[1].title }}
+      router-link(to='/article/3')
+        .story-item
+          img(src="../../img/story-03.jpg", alt="alt").d-flex
+          .story-overlay
+          .story-content-title {{ article[2].title }}
 </template>
 
 <script>
-  import ArticleData from '../mockData/ArticleData'
+import ArticleData from '../mockData/ArticleData'
 
-  export default {
-    data() {
-      return {
-        article: ArticleData
-      }
-    },
-    computed: {
+export default {
+  data() {
+    return {
+      article: ArticleData,
+    }
+  },
+  computed: {},
 
-    },
-
-    components: {}
-  }
+  components: {},
+}
 </script>
 
 <style lang="sass" scoped>
   @use "../../styles/variables" as *
-  section 
+  section
     padding-top: 50px
   .top
     text-align: left
@@ -77,17 +66,17 @@
     margin: 0 5%
   .story-container
     justify-content: center
+    padding: 0 28px
   .story-item
-    width: 28%
     margin: 15px
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15)
     border-radius: 1rem
     text-align: center
     position: relative
-  .story-item img 
+  .story-item img
     width: 100%
     border-radius: 0.8rem
-  .story-content-title 
+  .story-content-title
     position: absolute
     bottom: 1vw
     font-size: 25px
@@ -112,9 +101,10 @@
       padding-top: 0
     .story-item
       margin: 0 auto
-      width: 85%
+      width: 100%
+      height: 240px
       margin-top: 10%
-    .story-content-title 
+    .story-content-title
       bottom: 3vw
       right: 3vw
       padding-left: 3vw
