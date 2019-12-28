@@ -1,19 +1,22 @@
 <template lang="pug">
   section.landing
     nav-bar
-    .hero.bg-light.text-center(style="height: 500px") hero
-    .article.bg-secondary.text-center(style="height: 400px") article
+    .hero(style="height: 500px") hero
+    Article
 </template>
 
 <script>
   import NavBar from '../components/NavBar'
+  import Article from '../components/Article'
 
   export default {
     computed: {
 
     },
 
-    components: {NavBar}
+    components: {
+      NavBar,
+      Article}
   }
 </script>
 
