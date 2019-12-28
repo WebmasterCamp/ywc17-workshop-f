@@ -22,7 +22,7 @@
             slot-card(v-bind="slot" :selected="slot.day == currentSlot")
 
       .action-panel
-        b-button.payment-button ชำระเงิน
+        b-button.payment-button(to='/') ชำระเงิน
 </template>
 
 <script>
