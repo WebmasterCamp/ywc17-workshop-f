@@ -137,4 +137,8 @@ export default {
   .payment-btn
     background: $accent
     margin-left: 40px
+
+  .contact-btn, .payment-btn
+    font-size: 23px
+    min-width: 200px
 </style>
