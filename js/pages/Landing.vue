@@ -6,18 +6,10 @@
 </template>
 
 <script>
-  import NavBar from '../components/NavBar'
-  import Hero from '../components/Hero'
+import Hero from '../components/HeroSection'
+import NavBar from '../components/NavBar'
 
-  export default {
-    computed: {
-
-    },
-
-    components: {NavBar, Hero}
-  }
+export default {
+  components: {NavBar, Hero},
+}
 </script>
-
-<style lang="sass" scoped>
-
-</style>
