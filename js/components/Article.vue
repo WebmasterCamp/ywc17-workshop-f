@@ -10,17 +10,17 @@
         router-link(to='/article/1')
           img(src="../../img/story-01.jpg", alt="alt")
           .story-overlay
-          .story-content-title {{ article[0].title }}
+          .story-content-title(v-html="article[0].title")
       .story-item
         router-link(to='/article/2')
           img(src="../../img/story-02.jpg", alt="alt")
           .story-overlay
-          .story-content-title {{ article[1].title }}
+          .story-content-title(v-html="article[1].title")
       .story-item
         router-link(to='/article/3')
           img(src="../../img/story-03.jpg", alt="alt").d-flex
           .story-overlay
-          .story-content-title {{ article[2].title }}
+          .story-content-title(v-html="article[2].title")
 </template>
 
 <script>
