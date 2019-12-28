@@ -1,6 +1,6 @@
 <template lang="pug">
   b-navbar(toggleable='lg' type='light' variant='light')
-    b-navbar-brand
+    b-navbar-brand(to='/')
       img(src="../../img/logo.svg")
     b-navbar-toggle(target='nav-collapse')
       i.far.fa-bars.nav-icon
