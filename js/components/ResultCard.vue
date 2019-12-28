@@ -5,8 +5,7 @@
         img.image(:src="image")
       .right
         .title {{title}}
-        .tags-list
-          .tag(v-for="tag in tags") {{tag}}
+        tags-list(:tags="tags")
         .place-container
           i.fal.fa-map-marker-alt
           span.place-name {{location}}
@@ -21,10 +20,12 @@
 </template>
 
 <script>
+import TagsList from '../components/TagsList'
+
 export default {
   props: ['id', 'image', 'title', 'tags', 'location', 'rating'],
   computed: {},
-  components: {},
+  components: {TagsList},
 }
 </script>
 
@@ -66,18 +67,6 @@ export default {
 
   .title
     font-size: 1.8em
-
-  .tags-list
-    display: flex
-    margin: 0.2em 0
-
-    .tag
-      font-family: $body-font
-      font-size: 14px
-      padding: 0 10px
-      margin-right: 10px
-      border: 1px solid #1B2333
-      border-radius: 16px
 
   .place-container
     margin-top: 8px

@@ -5,17 +5,36 @@
       .backdrop-gradient
         .brief-info
           img.profile-photo(:src="data.image")
-          .name {{data.title}}
+          .info
+            .name {{data.title}}
+
+            .tags-container
+              tags-list(:tags="data.tags")
+
     section.container
+      .place-container(v-if="data.location")
+        i.icon.fal.fa-map-marker-alt
+        span.place-name {{data.location}}
+
+      .phone-container(v-if="data.phone")
+        i.icon.fal.fa-phone
+        span.place-name {{data.phone}}
+
+      hr
+
+      story-section
+
 </template>
 
 <script>
 import NavBar from '../components/NavBar'
+import TagsList from '../components/TagsList'
+import StorySection from '../components/StorySection'
 
 import {results} from '../result'
 
 export default {
-  components: {NavBar},
+  components: {NavBar, TagsList, StorySection},
 
   computed: {
     data() {
@@ -38,11 +57,7 @@ export default {
   @use '../../styles/variables' as *
 
   .container
-    margin: 50px 50px
-
-  .name
-    color: white
-    font-size: 32px
+    margin: 80px 50px
 
   .cover-section
     position: relative
@@ -62,13 +77,47 @@ export default {
 
     display: flex
     align-items: flex-end
-    justify-content: center
-    padding-bottom: 17px
+    justify-content: flex-start
+    padding-bottom: 10px
+    padding-left: 200px
+
+  .tags-container
+    margin-top: 25px
 
   .brief-info
     display: flex
+    position: absolute
+    margin-top: 55px
 
   .profile-photo
-    width: 150px
-    height: 150px
+    width: 100px
+    height: 100px
+    position: absolute
+    left: -43%
+    top: -30%
+    border-radius: 10px
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2)
+
+  .name
+    display: flex
+    align-items: flex-end
+    position: relative
+    color: white
+    font-size: 32px
+
+    @media screen and (max-width: $sm)
+      font-size: 28px
+
+  .place-name
+    margin-left: 10px
+    font-family: $body-font
+    font-size: 18px
+    line-height: 30px
+
+  .icon
+    width: 1.2em
+
+  hr
+    margin: 2em
 </style>
+
