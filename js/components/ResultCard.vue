@@ -60,7 +60,7 @@ export default {
     width: 100px
     height: 100px
     border-radius: 7px
-    background-color: #C4C4C4
+    background-color: white
 
   .left
     margin-right: 15px
