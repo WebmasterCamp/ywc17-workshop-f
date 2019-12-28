@@ -28,12 +28,12 @@ export default {
   computed: mapState({
     interests(state, props) {
       const interests = [
-        {title: 'ดนตรี'},
-        {title: 'ทำอาหาร'},
-        {title: 'วาดรูป'},
-        {title: 'กีฬา'},
-        {title: 'คอมพิวเตอร์'},
-        {title: 'ภาษาอังกฤษ'},
+        {title: 'ดนตรี', icon: 'treble'},
+        {title: 'ทำอาหาร', icon: 'chef'},
+        {title: 'วาดรูป', icon: 'artist'},
+        {title: 'กีฬา', icon: 'basketball'},
+        {title: 'คอมพิวเตอร์', icon: 'computer'},
+        {title: 'ภาษาอังกฤษ', icon: 'english'},
       ]
 
       return interests.map(d => ({...d, selected: state.interests[d.title]}))

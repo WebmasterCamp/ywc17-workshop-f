@@ -1,15 +1,20 @@
 <template lang="pug">
   .interest(@click="toggle", :class="classes")
     i.far.fa-check-circle.check-circle(v-if="selected")
-    .interest-text {{title}}
+    .x-container
+      img(:src="image" class="icon-image")
+      .interest-text {{title}}
 </template>
 
 <script>
 export default {
-  props: ['title', 'image', 'selected'],
+  props: ['title', 'icon', 'selected'],
   computed: {
     classes() {
       return {selected: this.selected}
+    },
+    image() {
+      return `/icons/${this.icon}.svg`
     },
   },
   methods: {
@@ -25,7 +30,7 @@ export default {
 
   .interest
     display: flex
-    align-items: flex-end
+    align-items: center
     justify-content: center
     background: white
     border-radius: 16px
@@ -37,8 +42,7 @@ export default {
     cursor: pointer
 
     .interest-text
-      font-size: 20px
-      margin-bottom: 20px
+      font-size: 26px
 
   .selected
     border: 3px solid $accent
@@ -49,4 +53,15 @@ export default {
     right: 20px
     font-size: 38px
     color: #11b3ac
+
+  .x-container
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+
+  .icon-image
+    width: 60px
+    height: 60px
+    margin-bottom: 10px
 </style>
