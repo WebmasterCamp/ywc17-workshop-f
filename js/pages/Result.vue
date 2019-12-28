@@ -80,7 +80,7 @@ export default {
 
   .result-card-rows
     display: grid
-    grid-template-columns: repeat(auto-fit, minmax(300px, 3fr))
+    grid-template-columns: repeat(auto-fit, minmax(350px, 2fr))
     grid-gap: 10px 30px
 
   .search-field

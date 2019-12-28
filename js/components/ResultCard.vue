@@ -1,5 +1,5 @@
 <template lang="pug">
-  .result-card-container
+  router-link.result-card-container(to='/detail')
     .result-card-header
       .left
         img.image(:src="image")
@@ -17,8 +17,7 @@
             i.fas.fa-star
         .rating-text {{rating}}
       .booking-container
-        router-link.book-button(to="/book")
-        router-link.details-button(to="/detail")
+        .details-button ดูรายละเอียด &gt;
 </template>
 
 <script>
@@ -39,6 +38,15 @@ export default {
     padding: 10px
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15)
     border-radius: 10px
+    cursor: pointer
+    color: $secondary
+    text-decoration: none !important
+    transition: all 0.5s cubic-bezier(0, 1.06, 0.58, 1)
+    border: 2px solid transparent
+
+    &:hover
+      box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3)
+      border: 2px solid $accent
 
   .result-card-header
     display: flex
@@ -79,7 +87,7 @@ export default {
 
   .stars
     display: flex
-    margin-right: 1em
+    margin-right: 0.6em
 
     .star
       display: flex
@@ -94,6 +102,19 @@ export default {
     font-family: $body-font
 
   .rating-text
-    font-size: 30px
+    font-size: 22px
     font-weight: bold
+
+  .details-button
+    color: #828282
+
+  .rating-container
+    flex: 2
+
+  .booking-container
+    flex: 1
+    display: flex
+    align-items: center
+    justify-content: flex-end
+    padding-right: 12px
 </style>
