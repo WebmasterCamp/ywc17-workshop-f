@@ -81,8 +81,7 @@ export default {
   .result-card-rows
     display: grid
     grid-template-columns: repeat(auto-fit, minmax(300px, 3fr))
-    grid-gap: 30px
-    margin: 50px 0
+    grid-gap: 10px 30px
 
   .search-field
     border-radius: 5em
@@ -102,4 +101,6 @@ export default {
     flex-direction: column
     align-items: center
     justify-content: center
+
+    margin: 30px 0
 </style>
