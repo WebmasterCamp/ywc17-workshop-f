@@ -12,8 +12,8 @@
             interest-card(v-bind="interest")
 
         .action-pane
-          router-link.skip-button(to='/list') ข้าม &gt;
           b-button.continue-button(to='/list') ต่อไป
+          router-link.skip-button(to='/list') ข้าม &gt;
 </template>
 
 <script>
@@ -70,7 +70,7 @@ export default {
   .skip-button
     font-size: 1.2em
     color: #828282
-    margin-bottom: 1.5em
+    margin-top: 1.5em
 
   .continue-button
     font-size: 1.3em
