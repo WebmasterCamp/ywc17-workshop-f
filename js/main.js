@@ -11,6 +11,7 @@ import Interests from './pages/Interests.vue'
 import Result from './pages/Result.vue'
 import Detail from './pages/Detail.vue'
 import Payment from './pages/Payment.vue'
+import FirstStory from './pages/FirstStory.vue'
 
 Vue.use(VueRouter)
 Vue.use(BootstrapVue)
@@ -22,6 +23,9 @@ const router = new VueRouter({
     { path: '/list', component: Result },
     { path: '/detail/:id', component: Detail },
     { path: '/payment', component: Payment },
+    { path: '/article/1', component: FirstStory },
+    { path: '/article/2', component: FirstStory },
+    { path: '/article/3', component: FirstStory },
   ]
 })
 
