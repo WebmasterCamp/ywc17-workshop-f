@@ -29,6 +29,8 @@
       .action-panel
         b-button.contact-btn(href="https://th-th.facebook.com/M.C.H.Moochopo" target="_blank") ติดต่อสอบถาม
         b-button.payment-btn(to='/payment') สมัครเรียน
+
+    footer-section
 </template>
 
 <script>
@@ -36,11 +38,18 @@ import NavBar from '../components/NavBar'
 import TagsList from '../components/TagsList'
 import StorySection from '../components/StorySection'
 import ReviewSection from '../components/ReviewSection'
+import FooterSection from '../components/FooterSection'
 
 import {results} from '../result'
 
 export default {
-  components: {NavBar, TagsList, StorySection, 'review-section': ReviewSection},
+  components: {
+    NavBar,
+    TagsList,
+    StorySection,
+    'review-section': ReviewSection,
+    FooterSection,
+  },
 
   computed: {
     data() {

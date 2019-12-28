@@ -14,11 +14,13 @@
       .result-card-rows
         .result-card-item(v-for="result in results" :key="result.id")
           result-card(v-bind="result")
+    footer-section
 </template>
 
 <script>
 import NavBar from '../components/NavBar'
 import ResultCard from '../components/ResultCard'
+import FooterSection from '../components/FooterSection'
 
 import {results} from '../result'
 
@@ -33,7 +35,7 @@ export default {
       return results.filter(x => x.title && x.title.includes(this.search))
     },
   },
-  components: {ResultCard, NavBar},
+  components: {ResultCard, NavBar, FooterSection},
 }
 </script>
 
