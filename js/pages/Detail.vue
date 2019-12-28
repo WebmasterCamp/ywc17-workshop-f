@@ -50,5 +50,5 @@ export default {
     position: absolute
     width: 100%
     height: 100%
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 7%, transparent 46%);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 7%, transparent 46%)
 </style>
