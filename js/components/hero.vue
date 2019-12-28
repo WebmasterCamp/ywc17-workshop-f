@@ -6,13 +6,11 @@
 </template>
 
 <script>
-  export default {
-    computed: {
+export default {
+  computed: {},
 
-    },
-
-    components: {}
-  }
+  components: {},
+}
 </script>
 
 <style lang="sass" scoped>
@@ -31,7 +29,6 @@
     font-size: 20px
 
   .action-button
-    border-radius: 5em
     margin-top: 5%
     padding: 0.5em 2em
 
