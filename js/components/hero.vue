@@ -2,7 +2,7 @@
   .hero
     .hero-head กิจกรรมสุดพิเศษ สำหรับลูกคนพิเศษ
     .hero-detail Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-    b-button.action-button(variant='primary') ค้นหากิจกรรม
+    b-button.action-button(to='/interests') ค้นหากิจกรรม
 </template>
 
 <script>
