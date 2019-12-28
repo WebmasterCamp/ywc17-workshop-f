@@ -10,12 +10,12 @@
         b-nav-item(to='/' active) หน้าหลัก
         b-nav-item(to='') บทความ
         b-nav-item(to='') ติดต่อเรา
-        b-button.search-btn(variant='primary') ค้นหา
+        b-button.search-btn ค้นหา
 
 </template>
 
 <script>
-  export default {}
+export default {}
 </script>
 
 <style lang="sass" scoped>
