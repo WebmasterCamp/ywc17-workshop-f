@@ -2,7 +2,7 @@
   main
     nav-bar
     .container
-      b-input.search-field(placeholder="ค้นหา")
+      b-input.search-field(placeholder="ค้นหา" v-model='search')
 
       .filter-container
         .filter-button
@@ -23,7 +23,16 @@ import ResultCard from '../components/ResultCard'
 import {results} from '../result'
 
 export default {
-  data: () => ({results}),
+  data: () => ({
+    search: '',
+  }),
+  computed: {
+    results() {
+      if (!this.search) return results
+
+      return results.filter(x => x.title && x.title.includes(this.search))
+    },
+  },
   components: {ResultCard, NavBar},
 }
 </script>
