@@ -8,8 +8,8 @@
       b-navbar-nav
       b-navbar-nav.ml-auto
         b-nav-item(to='/' active) หน้าหลัก
-        b-nav-item(to='/') บทความ
-        b-nav-item(to='/') ติดต่อเรา
+        b-nav-item(href='/' target='_blank') บทความ
+        b-nav-item(href='/' target='_blank') ติดต่อเรา
         b-button.search-btn(to='/list') ค้นหา
 </template>
 
