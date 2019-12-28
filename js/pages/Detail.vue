@@ -94,7 +94,11 @@ export default {
   .brief-info
     display: flex
     position: absolute
+    left: 300px
     margin-top: 55px
+
+    @media screen and (max-width: $md)
+      left: 150px
 
   .profile-photo
     width: 100px
@@ -141,4 +145,7 @@ export default {
   .contact-btn, .payment-btn
     font-size: 23px
     min-width: 200px
+
+  .info
+    margin-left: 10px
 </style>
