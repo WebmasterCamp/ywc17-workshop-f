@@ -10,6 +10,7 @@ import Landing from './pages/Landing.vue'
 import Interests from './pages/Interests.vue'
 import Result from './pages/Result.vue'
 import Detail from './pages/Detail.vue'
+import Payment from './pages/Payment.vue'
 
 Vue.use(VueRouter)
 Vue.use(BootstrapVue)
@@ -20,6 +21,7 @@ const router = new VueRouter({
     { path: '/interests', component: Interests },
     { path: '/list', component: Result },
     { path: '/detail/:id', component: Detail },
+    { path: '/payment', component: Payment },
   ]
 })
 
