@@ -3,6 +3,6 @@
   "alias": ["workshop-f.ywc17.ywc.in.th"],
   "regions": ["all"],
   "builds": [
-    { "src": "**/*", "use": "@now/static" }
+    { "src": "package.json", "use": "@now/static-build" }
   ]
 }

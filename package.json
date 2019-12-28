@@ -1,12 +1,14 @@
 {
-  "name": "hacker-templates-vue",
+  "name": "specialit",
+  "description": "Special activities for your special child.",
   "version": "1.0.0",
   "main": "index.js",
   "author": "Phoomparin Mano <phoomparin@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "parcel index.html",
-    "build": "parcel build index.html"
+    "start": "parcel index.pug",
+    "build": "parcel build index.pug",
+    "now-build": "parcel build index.pug"
   },
   "devDependencies": {
     "@babel/core": "^7.7.7",
@@ -14,6 +16,8 @@
     "@vue/component-compiler-utils": "^3.1.0",
     "parcel-bundler": "^1.12.4",
     "parcel-plugin-static-files-copy": "^2.2.1",
+    "pug": "^2.0.4",
+    "sass": "^1.24.0",
     "vue-template-compiler": "^2.6.11"
   },
   "dependencies": {
