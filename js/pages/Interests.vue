@@ -12,8 +12,8 @@
             interest-card(v-bind="interest")
 
         .action-pane
-          router-link.skip-button(to='/') ข้าม &gt;
-          b-button.continue-button(to='/') ต่อไป
+          router-link.skip-button(to='/list') ข้าม &gt;
+          b-button.continue-button(to='/list') ต่อไป
 </template>
 
 <script>

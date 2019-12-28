@@ -8,18 +8,20 @@ import store from './store'
 
 import Landing from './pages/Landing.vue'
 import Interests from './pages/Interests.vue'
+import Result from './pages/Result.vue'
 
 Vue.use(VueRouter)
 Vue.use(BootstrapVue)
 
 const router = new VueRouter({
-	routes: [
-		{path: '/', component: Landing},
-		{path: '/interests', component: Interests},
-	]
+  routes: [
+    { path: '/', component: Landing },
+    { path: '/interests', component: Interests },
+    { path: '/list', component: Result },
+  ]
 })
 
-const app = new Vue({el: '#app', router, store})
+const app = new Vue({ el: '#app', router, store })
 
 window.app = app
 window.store = store
