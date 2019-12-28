@@ -1,6 +1,10 @@
 <template lang="pug">
   section 
-    .title บทความล่าสุด
+    .top.d-flex.justify-content-between
+      .title บทความล่าสุด
+      .link-container-top.text-center
+        router-link(to="/google" tag="div")
+          .link อ่านทั้งหมด
     .article-row.p-4.d-flex.justify-content-center.flex-wrap
       .article-el
         img(src="../../img/article-01.jpg", alt="alt")
@@ -14,6 +18,9 @@
         img(src="../../img/article-03.jpg", alt="alt")
         .article-overlay
         .article-title {{ article[2].title }}
+    .link-container-bottom.text-center
+      router-link(to="/google" tag="div")
+        .link อ่านทั้งหมด
 </template>
 
 <script>
@@ -36,9 +43,24 @@
 <style lang="sass" scoped>
   @use "../../styles/variables" as *
 
-  section
-    text-align: center
+  .top
+    text-align: left
+    padding: 0 5%
     font-size: 32px
+    color: #1E1E1E
+  .link
+    font-size: 20px
+    color: #1E1E1E
+    cursor: pointer
+    -webkit-tap-highlight-color: transparent
+    text-decoration: none
+    color: inherit
+  .link:hover
+    color: $accent
+  .link-container-top
+    display: block
+  .link-container-bottom
+    display: none
   .article-el
     width: 28%
     margin: 0.8rem
@@ -64,12 +86,16 @@
 
   @media only screen and (max-width: 576px)
     .title
-      text-align: left
-      padding-left: 10%
+      text-align: center
+      padding-left: 0
     .article-el
       width: 80%
     .article-title 
       bottom: 8%
       font-size: 20px
       right: 8%
+    .link-container-top
+      display: none
+    .link-container-bottom
+      display: block
 </style>
